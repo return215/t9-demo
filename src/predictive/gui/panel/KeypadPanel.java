@@ -4,6 +4,8 @@ import java.awt.*;
 
 import javax.swing.*;
 
+import predictive.gui.util.HTMLString;
+
 public class KeypadPanel extends JPanel {
 
 	/**
@@ -19,29 +21,29 @@ public class KeypadPanel extends JPanel {
 	
 	/** BUTTONS */
 	/** Button 1 for symbols */
-	JButton button1 = new JButton("1\n.,-!");
+	JButton button1 = new JButton(HTMLString.createKeypadFormat("1",".,-!"));
 	/** Button 2 for ABC */
-	JButton button2 = new JButton("2\nABC");
+	JButton button2 = new JButton(HTMLString.createKeypadFormat("2","ABC"));
 	/** Button 3 for DEF */
-	JButton button3 = new JButton("3\nDEF");
+	JButton button3 = new JButton(HTMLString.createKeypadFormat("3","DEF"));
 	/** Button 4 for GHI */
-	JButton button4 = new JButton("4\nGHI");
+	JButton button4 = new JButton(HTMLString.createKeypadFormat("4","GHI"));
 	/** Button 5 for JKL */
-	JButton button5 = new JButton("5\nJKL");
+	JButton button5 = new JButton(HTMLString.createKeypadFormat("5","JKL"));
 	/** Button 6 for MNO */
-	JButton button6 = new JButton("6\nMNO");
+	JButton button6 = new JButton(HTMLString.createKeypadFormat("6","MNO"));
 	/** Button 7 for PQRS */
-	JButton button7 = new JButton("7\nPQRS");
+	JButton button7 = new JButton(HTMLString.createKeypadFormat("7","PRQS"));
 	/** Button 8 for TUV */
-	JButton button8 = new JButton("8\nTUV");
+	JButton button8 = new JButton(HTMLString.createKeypadFormat("8","TUV"));
 	/** Button 9 for WXYZ */
-	JButton button9 = new JButton("9\nWXYZ");
+	JButton button9 = new JButton(HTMLString.createKeypadFormat("9","WXYZ"));
 	/** Button * for next prediction */
-	JButton buttonA = new JButton("*\n(NEXT)");
+	JButton buttonA = new JButton(HTMLString.createKeypadFormat("*","(NEXT)"));
 	/** Button 0 for space */
-	JButton button0 = new JButton("0\n_");
+	JButton button0 = new JButton(HTMLString.createKeypadFormat("0","_"));
 	/** Button # for backspace */
-	JButton buttonE = new JButton("#\n(DEL)");
+	JButton buttonE = new JButton(HTMLString.createKeypadFormat("#","(DEL)"));
 	
 	public KeypadPanel() {
 		setLayout(_layout);
