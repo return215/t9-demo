@@ -16,7 +16,7 @@ jobs:
     - name: Build project
       run: ./build.sh
       shell: bash
-    - name: Problem 1: Test prototype
+    - name: "Problem 1: Test prototype"
       run: ./test-proto.sh
       shell: bash
       continue-on-error: true
