@@ -1,6 +1,12 @@
 package predictive;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
+
+import predictive.dictionary.DUtil;
+import predictive.dictionary.DictionaryMap;
 
 public class PredictivePrototype {
 
@@ -81,8 +87,36 @@ public class PredictivePrototype {
 		return temp.toString();
 	}
 	
-//	public static Set<String> signatureToWords(String signature) {
-//		
-//	}
+	/**
+	 * Search words that match the specified signature.
+	 * A prototype, brute-force implementation.
+	 * @deprecated More efficient implementations are available.
+	 * @param signature Signature to check
+	 * @return Distinct list of words
+	 * @see DictionaryMap
+	 */
+	public static Set<String> signatureToWords(String signature) {
+		HashSet<String> _set = new HashSet<String>();
+
+		try {
+			// This is a bottleneck. It will be invoked with every call.
+			// If we need to reuse this over and over, it will take
+			// too long just to reload the file again.
+			// It is best if we only load it once and then read from it.
+			ArrayList<String> words = DUtil.readDictionaryFile("words");
+			for (String word : words) {
+				String sig = PredictivePrototype.wordToSignature(word);
+				if (sig.equals(signature)) {
+					_set.add(word);
+				}
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.err.println("Unable to read dictionary file. Please check if the file exists and can be accessed.");
+		}
+		
+		return _set;
+	}
 
 }
