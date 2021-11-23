@@ -2,6 +2,5 @@
 
 [ -d bin ] || mkdir bin
 
-pwd
-which javac && javac -d bin -sourcepath src src/**/*.java
+which javac > /dev/null && javac -d bin -sourcepath src src/**/*.java
 

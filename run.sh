@@ -1,4 +1,4 @@
 #!/bin/bash
 
-which java && java -cp bin $@
+which java > /dev/null && java -cp bin $@
 
