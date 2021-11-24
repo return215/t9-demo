@@ -6,6 +6,7 @@ This is the third quiz in Object Oriented Programming subject. This is a team pr
 
 Participants:
 - Muhammad Hidayat (05111940000131)
+- Nouvelli Cornelia (05111940000011)
 
 ## Working on the project
 
@@ -32,5 +33,5 @@ We provide you with some Bash scripts to help with development, namely `build.sh
 
 4. Create a branch for your work and start building. See ["Working on the project"](#working-on-the-project) for more details. 
 5. Once you're done, push your changes to your forked repo.
-6. On GitHub, you can create a pull request. Please explain what changes are you making. I will be reviewing your code before merging it to `main`.
-7. Congratulations, you have contributed to my project!
+6. On GitHub, you can create a pull request. Please explain what changes are you making. I will be reviewing your code before merging it to `main`. Also, the code will be tested automatically by GitHub Actions.
+7. If your code gets merged, congratulations, you have contributed to my project!
