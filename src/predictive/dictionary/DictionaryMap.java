@@ -2,13 +2,14 @@ package predictive.dictionary;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.HashSet;
 
 import predictive.PredictivePrototype;
 
-public class DictionaryMap {
+public class DictionaryMap implements DictionaryBase {
 
 	private HashMap<String, Set<String> > _map;
 	
@@ -25,7 +26,7 @@ public class DictionaryMap {
 	}
 	
 	public Set<String> signatureToWords(String sig) {
-		return _map.get(sig);
+		return _map.getOrDefault(sig, Collections.emptySet());
 	}
 
 }

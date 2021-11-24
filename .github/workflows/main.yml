@@ -20,3 +20,7 @@ jobs:
       run: ./test-proto.sh
       shell: bash
       continue-on-error: true
+    - name: "Problem 2-3: Test dictionary implementations"
+      run: ./test-dict.sh
+      shell: bash
+      continue-on-error: true
