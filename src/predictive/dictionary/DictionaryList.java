@@ -38,6 +38,12 @@ public class DictionaryList implements DictionaryBase {
 		// By using an empty word, it is guaranteed that it will hit the first
 		// signature of the sequence.
 		int pos = java.util.Collections.binarySearch(list, new WordSig("", sig));
+		
+		// Because the placeholder WordSig does not exist in the list,
+		// the position falls into the negative range. The position is defined as
+		// pos = (-(insertion_point) - 1)
+		// The insertion point is where the WordSig element would be
+		// if it was an insertion operation instead.
 		int ipoint = - pos - 1;
 		
 		// if found
