@@ -2,8 +2,11 @@ package predictive.gui;
 
 import javax.swing.*;
 
+import predictive.gui.controller.MainController;
+import predictive.gui.model.InputModel;
 import predictive.gui.panel.InputPanel;
 import predictive.gui.panel.KeypadPanel;
+import predictive.gui.view.MainView;
 
 import java.awt.*;
 
@@ -23,24 +26,11 @@ public class Main {
 		}
 		
 
-	    KeypadPanel kp = new KeypadPanel();
-	    InputPanel ip = new InputPanel();
-	 
-	    /** content pane */
-	    JPanel cp = new JPanel(new BorderLayout(8, 8));
-
-	    cp.add(ip, BorderLayout.PAGE_START);
-	    cp.add(kp, BorderLayout.PAGE_END);
-	 
-	    JFrame frame = new JFrame();
-	    frame.setTitle("Predictive Text Demo");
-	    frame.setPreferredSize(new Dimension(320, 480));
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setContentPane(cp);
-	    frame.pack();
-	    frame.setVisible(true);
-	 
-	  
+		MainView view = new MainView();
+		MainController control = new MainController(null, view);
+	
+		control.showView();
+	
 	}
 
 }

@@ -1,6 +1,7 @@
 package predictive.gui.panel;
 
 import java.awt.*;
+import java.awt.event.*;
 
 import javax.swing.*;
 
@@ -74,6 +75,22 @@ public class KeypadPanel extends JPanel {
 		add(buttonA);
 		add(button0);
 		add(buttonE);
+	}
+	
+	public void addActionListener(ActionListener l) {
+		// TODO Auto-generated method stub
+		button1.addActionListener(l);
+		button2.addActionListener(l);
+		button3.addActionListener(l);
+		button4.addActionListener(l);
+		button5.addActionListener(l);
+		button6.addActionListener(l);
+		button7.addActionListener(l);
+		button8.addActionListener(l);
+		button9.addActionListener(l);
+		buttonA.addActionListener(l);
+		button0.addActionListener(l);
+		buttonE.addActionListener(l);
 	}
 
 }
