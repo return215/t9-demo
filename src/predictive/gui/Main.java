@@ -2,6 +2,7 @@ package predictive.gui;
 
 import javax.swing.*;
 
+import predictive.gui.panel.InputPanel;
 import predictive.gui.panel.KeypadPanel;
 
 import java.awt.*;
@@ -23,10 +24,13 @@ public class Main {
 		
 
 	    KeypadPanel kp = new KeypadPanel();
+	    InputPanel ip = new InputPanel();
 	 
 	    /** content pane */
-	    JPanel cp = new JPanel();
-	    cp.add(kp);
+	    JPanel cp = new JPanel(new BorderLayout(8, 8));
+
+	    cp.add(ip, BorderLayout.PAGE_START);
+	    cp.add(kp, BorderLayout.PAGE_END);
 	 
 	    JFrame frame = new JFrame();
 	    frame.setTitle("Predictive Text Demo");
